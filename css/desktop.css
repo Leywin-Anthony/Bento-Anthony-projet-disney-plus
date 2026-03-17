@@ -1,0 +1,37 @@
+/* ============================================
+   desktop.css — Styles Desktop
+   Appliqué pour les écrans >= 1024px
+   Chargé via : <link media="(min-width: 1024px)">
+============================================ */
+
+/* Sur grand écran, le titre du héro est plus grand */
+.hero h1 {
+  font-size: 40px;
+}
+
+/* Le tableau des abonnements a plus d'espace */
+.tableau-abonnements th,
+.tableau-abonnements td {
+  padding: 20px 28px;
+}
+
+/* Les avantages sont espacés davantage */
+.avantages {
+  gap: 70px;
+}
+
+/* La grille des appareils compatibles est bien répartie */
+.grille-appareils {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Le texte Shogun est un peu plus grand */
+.shogun-texte h2 {
+  font-size: 26px;
+}
+
+/* Footer : liens sur une seule ligne si possible */
+.footer-liens {
+  gap: 5px 25px;
+}

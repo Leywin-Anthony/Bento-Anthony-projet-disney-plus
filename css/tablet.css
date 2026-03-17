@@ -1,0 +1,52 @@
+/* ============================================
+   tablet.css — Styles Tablette
+   Appliqué pour les écrans entre 600px et 1023px
+============================================ */
+
+/* Titre du héro légèrement réduit */
+.hero h1 {
+  font-size: 28px;
+}
+
+/* Formulaire reste côte à côte sur tablette */
+.hero-formulaire {
+  flex-direction: row;
+}
+
+/* Tableau des abonnements : espacement réduit */
+.tableau-abonnements th,
+.tableau-abonnements td {
+  padding: 14px 14px;
+  font-size: 13px;
+}
+
+/* Les avantages passent à 2 par ligne */
+.avantages {
+  gap: 30px;
+}
+
+.avantage-item {
+  max-width: 200px;
+}
+
+/* Section Shogun : texte légèrement remonté */
+.shogun-texte {
+  bottom: 15%;
+  left: 6%;
+  max-width: 320px;
+}
+
+.shogun-texte h2 {
+  font-size: 20px;
+}
+
+/* Grille des appareils : 2 colonnes */
+.grille-appareils {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Footer : liens sur plusieurs lignes */
+.footer-liens {
+  gap: 5px 14px;
+}

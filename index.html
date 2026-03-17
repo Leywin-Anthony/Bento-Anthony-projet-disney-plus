@@ -1,141 +1,354 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style/index.css" />
-    <script src="./index.js" defer></script>
-  </head>
-  <body>
-    <nav>
-      <button>s'identifier</button>
-    </nav>
-    <header>
-      <div class="content-header"></div>
-      <h1>
-        Nouvelles productions originales, grands films, séries cultes et encore
-        + en streaming
-      </h1>
-      <h3>Sans coût additionnel. Sans engagement.</h3>
-      <p></p>
-      <div class="mail">
-        <input type="email" placeholder="Adresse e-mail" />
-        <button>s'inscrire</button>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney+ | Streaming de films et séries</title>
+
+  <!-- normalize.css -->
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <!-- CSS global (toujours chargé) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- CSS desktop (écrans >= 1024px) -->
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1024px)">
+
+  <!-- CSS tablette (entre 600px et 1023px) -->
+  <link rel="stylesheet" href="css/tablet.css" media="(min-width: 600px) and (max-width: 1023px)">
+
+  <!-- CSS mobile (écrans <= 599px) -->
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 599px)">
+</head>
+
+<body>
+
+  <!-- ============================== header ============================== -->
+  <header class="header">
+    <a href="#" class="bouton-identifier">S'IDENTIFIER</a>
+  </header>
+
+
+  <!-- ============================== hero ============================== -->
+  <section class="hero">
+
+    <div class="hero-contenu">
+
+      <h1>Nouvelles productions originales, grands films, séries cultes et encore + en streaming</h1>
+
+      <p class="hero-sous-titre">Sans coût additionnel. Sans engagement.*</p>
+
+      <div class="hero-formulaire">
+        <input type="email" placeholder="Adresse e-mail" id="champ-email">
+        <button onclick="inscrire()" class="bouton-inscrire">S'INSCRIRE</button>
       </div>
-      <p>
-        Profitez de 12 mois au prix de 10 abonnement Premium ou Standard annuel.
-        Economies rapport à un abonnement mensuel.
+
+      <p class="hero-promo">
+        Profitez de 12 mois au prix de 10 avec un abonnement Premium ou Standard annuel.
+        <a href="#">Économisez</a> par rapport à un abonnement mensuel.
       </p>
-      <p>
-        * La résiliation prend effet à la fin de la periode d'abonnement en
-        cours. Abonnement requis. Becoming Karl Lagerfeld en streaming des le 7
-        juin.
+
+      <p class="hero-note">
+        * La résiliation prend effet à la fin de la période d'abonnement en cours. Abonnement requis.
       </p>
-      <span></span>
-    </header>
-    <main>
-      <section class="section_1">
-        <div class="container-background">
-          <h2>Seulement sur Disney+</h2>
-          <p>
-            Des séries et productions originales exclusives que vous ne
-            trouverez sur aucun autre service de streaming.
-          </p>
-          <p>lalal 2023 TAS Rights Management LLC</p>
+
+    </div>
+
+    <div class="hero-fleche" onclick="allerSection()">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </section>
+
+
+  <!-- ============================== shogun ============================== -->
+  <section class="section-shogun">
+
+    <img src="img/shogun-background.jpeg" alt="Shogun - FX" class="shogun-image">
+
+    <div class="shogun-texte">
+      <h2>Seulement sur Disney+</h2>
+      <p>Des séries et productions originales exclusives que vous ne trouverez sur aucun autre service de streaming.</p>
+      <p class="copyright">© 2023 TAS Rights Management LLC</p>
+    </div>
+
+  </section>
+
+
+  <!-- ============================== section 3 ============================== -->
+  <section class="section-abonnements">
+
+    <h2>Sélectionnez votre abonnement</h2>
+
+    <table class="tableau-abonnements">
+      <thead>
+        <tr>
+          <th></th>
+          <th>STANDARD<br><span class="sous-titre-plan">AVEC PUB</span></th>
+          <th>STANDARD</th>
+          <th class="colonne-premium">PREMIUM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Profitez de 12 mois au prix de 10*</td>
+          <td class="tiret">—</td>
+          <td class="prix">89,90 € / an</td>
+          <td class="prix colonne-premium">119,90 € / an</td>
+        </tr>
+        <tr>
+          <td>Qualité vidéo jusqu'à</td>
+          <td>1080p Full HD</td>
+          <td>1080p Full HD</td>
+          <td class="colonne-premium">4K Ultra HD et HDR</td>
+        </tr>
+        <tr>
+          <td>Lectures simultanées</td>
+          <td>2</td>
+          <td>2</td>
+          <td class="colonne-premium">4</td>
+        </tr>
+        <tr>
+          <td>Téléchargements</td>
+          <td class="tiret">—</td>
+          <td class="coche">✓</td>
+          <td class="coche colonne-premium">✓</td>
+        </tr>
+        <tr>
+          <td>Prise en charge de Dolby Atmos</td>
+          <td class="tiret">—</td>
+          <td class="tiret">—</td>
+          <td class="coche colonne-premium">✓</td>
+        </tr>
+        <tr>
+          <td>Streaming sans publicité**</td>
+          <td class="tiret">—</td>
+          <td class="coche">✓</td>
+          <td class="coche colonne-premium">✓</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="notes-tableau">
+      <p>* Économies par rapport à un an d'abonnement mensuel.</p>
+      <p>** Toutes les offres d'abonnements peuvent inclure des bandes-annonces pour nos films de cinéma,
+        la promotion de produits et services Disney. La qualité audio et vidéo dépend du débit Internet
+        et des capacités de votre appareil. <a href="#">En savoir plus</a>.</p>
+    </div>
+
+  </section>
+
+
+  <!-- ============================== section 4 ============================== -->
+  <section class="section-appareils">
+
+    <h2>Regardez selon vos envies</h2>
+    <p class="sous-titre-section">Profitez des plus belles histoires au monde, partout et à tout moment.</p>
+
+    <img src="img/appareils-mockup.jpeg" alt="Disney+ sur tous vos appareils" class="image-appareils">
+
+    <div class="avantages">
+
+      <div class="avantage-item">
+        <div class="avantage-icone">
+          <img src="img/icone-divertissement.png" alt="Divertissement">
         </div>
-      </section>
-      <section class="section_2">
-        <h2>Sélectionnez votre abonnement</h2>
-        <!-- ajout tableau ici -->
-        <p>*Economies par rapport à un an d'abonnement mensuel</p>
-        <p>
-          ** Toutes les offres d'abonnements peuvent inclure des bandes-annonces
-          pour nos flims de cinema, la promotion de produits et services Disney,
-          des messages de parrianage et autres contenus promotionennels limites.
-          La quantite audio et video depend du debit internet et des capacites
-          de votre appareil. Abonnemtn Standard avec pub : pas disponible sur
-          certains appareils, et ne permets pas les telechargements.
-          <span>En savoir plus</span>
-        </p>
-      </section>
-      <section class="section_3">
-        <h2>Regardez selon vos envies</h2>
-        <p>
-          Profitez des plus belles histoires et séries, partout et à tout
-          moment.
-        </p>
-        <div class="container-img"></div>
-        <div class="list-advantage">
-          <div class="block-advantage">
-            <h3>Un divertissement sans fin</h3>
-            <p>
-              Découvrez des milliers de films, séries et productions originales.
-            </p>
-          </div>
-          <div class="block-advantage">
-            <h3>Disponible sur vos appareils préférés</h3>
-            <p>Utilisez jusqu’à 4 appareils compatibles en simultané.</p>
-          </div>
-          <div class="block-advantage">
-            <h3>Un contrôle parental intuitif</h3>
-            <p>
-              Protégez votre famille avec un contrôle parental simple
-              d’utilisation.
-            </p>
-          </div>
+        <h3>Un divertissement sans fin</h3>
+        <p>Découvrez des milliers d'heures de séries, films et productions originales.</p>
+      </div>
+
+      <div class="avantage-item">
+        <div class="avantage-icone">
+          <img src="img/icone-appareils.png" alt="Appareils compatibles">
         </div>
-      </section>
-      <section class="section_4">
-        <h2>Questions fréquentes</h2>
-        <!-- menu a ajouter ici -->
-      </section>
-      <section class="section_5">
-        <h2>Accessible sur vos appareils préférés</h2>
-        <div class="list-display">
-          <div class="block-item">
-            <h3>Télévisions</h3>
-            <p>Amazon Fire TV Android TV Apple TV Chromecast LG TV Samsung</p>
-          </div>
-          <div class="block-item">
-            <h3>Ordinateurs</h3>
-            <p>Chrome OS MacOS PC Windows</p>
-          </div>
-          <div class="block-item">
-            <h3>Mobiles et tablettes</h3>
-            <p>
-              Tablettes Amazon Fire Mobiles et tablettes Android iPhone & iPad
-            </p>
-          </div>
-          <div class="block-item">
-            <h3>Consoles de jeux</h3>
-            <p>PS4 PS5 Xbox One Xbox Series X | S</p>
-          </div>
+        <h3>Disponible sur vos appareils préférés</h3>
+        <p>Utilisez jusqu'à 4 appareils compatibles en simultané.</p>
+      </div>
+
+      <div class="avantage-item">
+        <div class="avantage-icone">
+          <img src="img/icone-parental.png" alt="Contrôle parental">
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="logo"></div>
-      <div class="mention">
+        <h3>Un contrôle parental intuitif</h3>
+        <p>Protégez votre famille avec un contrôle parental simple d'utilisation.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================== section 5 ============================== -->
+  <section class="section-faq">
+
+    <h2>Questions fréquentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="ouvrirFaq(this)">
+        Qu'est-ce que Disney+ ?
+        <span class="faq-signe">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Disney+ est la destination des univers Disney, Pixar, Marvel, Star Wars, National Geographic, Star et encore +.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="ouvrirFaq(this)">
+        Que puis-je regarder sur Disney+ ?
+        <span class="faq-signe">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Disney+ vous offre une collection d'histoires qui ne cesse de s'agrandir :</p>
         <ul>
-          <li>francais</li>
-          <li><a href="">conditions generales d'abonnement</a></li>
-          <li><a href="">Regles de respect de la vie privée</a></li>
-          <li><a href="">Droits Données dans l'EU et au R-U</a></li>
-          <li><a href="">politiques cookies</a></li>
-          <li>Publicites ciblees par centres d'interet</li>
-          <li>Apareils compatibles</li>
-          <li>Aide</li>
-          <li>Offrez Disney+</li>
-          <li>A propos de Disney+</li>
-          <li>Gerez les preferences de confidentialité</li>
+          <li>Des séries et des films originaux exclusifs</li>
+          <li>Des classiques intemporels réalisés par Walt Disney Animation Studios</li>
+          <li>Toute la saga Star Wars et l'univers cinématographique Marvel</li>
+          <li>Des documentaires National Geographic et bien plus encore</li>
         </ul>
       </div>
-      <p>
-        Le contenue et les plateformes disponibles peuvent varier selon la zone
-        géographique. lalalaal 2024 Disney et ses societés affiliées. Tous
-        droits réservés.
-      </p>
-    </footer>
-  </body>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="ouvrirFaq(this)">
+        Quel est le prix de l'abonnement Disney+ ?
+        <span class="faq-signe">+</span>
+      </button>
+      <div class="faq-reponse">
+        <ul>
+          <li><strong>Premium</strong> : 11,99 €/mois ou 119,90 €/an — 4K, 4 écrans, Dolby Atmos, sans pub</li>
+          <li><strong>Standard</strong> : 8,99 €/mois ou 89,90 €/an — 1080p, 2 écrans, sans pub</li>
+          <li><strong>Standard avec pub</strong> : 5,99 €/mois — 1080p, 2 écrans</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="ouvrirFaq(this)">
+        Quels appareils puis-je utiliser avec Disney+ ?
+        <span class="faq-signe">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Disney+ est accessible sur mobiles, navigateurs Web, consoles de jeux, décodeurs TV et TV connectées.
+          Cliquez <a href="#">ici</a> pour retrouver la liste complète des appareils compatibles.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="ouvrirFaq(this)">
+        L'abonnement Disney+ comprend-il une durée d'engagement ?
+        <span class="faq-signe">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Disney+ est sans engagement. Pour vous désabonner :</p>
+        <ol>
+          <li>Identifiez-vous sur www.DisneyPlus.com</li>
+          <li>Sélectionnez votre profil</li>
+          <li>Sélectionnez Compte</li>
+          <li>Sélectionnez votre abonnement</li>
+          <li>Sélectionnez Résilier l'abonnement</li>
+          <li>Sélectionnez Continuer pour résilier</li>
+        </ol>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================== section 6 ============================== -->
+  <section class="section-compatibles">
+
+    <h2>Accessible sur vos appareils préférés</h2>
+
+    <div class="grille-appareils">
+
+      <div class="appareil-item">
+        <img src="img/logo-television.png" alt="Télévisions">
+        <h3>Télévisions</h3>
+        <ul>
+          <li>Amazon Fire TV</li>
+          <li>Appareils Android TV</li>
+          <li>Apple TV</li>
+          <li>Chromecast</li>
+          <li>TV LG</li>
+          <li>Roku</li>
+          <li>Samsung</li>
+        </ul>
+      </div>
+
+      <div class="appareil-item">
+        <img src="img/logo-ordinateur.png" alt="Ordinateurs">
+        <h3>Ordinateurs</h3>
+        <ul>
+          <li>Chrome OS</li>
+          <li>MacOS</li>
+          <li>PC Windows</li>
+        </ul>
+      </div>
+
+      <div class="appareil-item">
+        <img src="img/logo-tablette.png" alt="Mobiles et tablettes">
+        <h3>Mobiles et tablettes</h3>
+        <ul>
+          <li>Tablettes Amazon Fire</li>
+          <li>Mobiles et tablettes Android</li>
+          <li>iPhone &amp; iPad</li>
+        </ul>
+      </div>
+
+      <div class="appareil-item">
+        <img src="img/logo-manette.png" alt="Consoles de jeux">
+        <h3>Consoles de jeux</h3>
+        <ul>
+          <li>PS4</li>
+          <li>PS5</li>
+          <li>Xbox One</li>
+          <li>Xbox Series X</li>
+          <li>Xbox Series S</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================== footer ============================== -->
+  <footer class="footer">
+
+    <img src="img/logo-disney-plus.png" alt="Disney+" class="footer-logo">
+
+    <div class="footer-liens">
+      <!-- Ce lien déclenche le switch de langue via JavaScript -->
+      <a href="#" onclick="changerLangue(); return false;" class="lien-langue">🌐 Français ∨</a>
+      <a href="#">Conditions générales d'abonnement</a>
+      <a href="#">Règles de Respect de la Vie Privée</a>
+      <a href="#">Droits Données dans l'UE et au R-U</a>
+      <a href="#">Politique de cookies</a>
+    </div>
+
+    <div class="footer-liens">
+      <a href="#">Publicités ciblées par centres d'intérêt</a>
+      <a href="#">Appareils compatibles</a>
+      <a href="#">Aide</a>
+      <a href="#">Offrez Disney+</a>
+      <a href="#">À propos de Disney+</a>
+      <a href="#">Gérer les préférences de confidentialité</a>
+    </div>
+
+    <p class="footer-legal">
+      Le contenu et les plateformes disponibles peuvent varier selon la zone géographique.<br>
+      © 2024 Disney et ses sociétés affiliées. Tous droits réservés.
+    </p>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+
+</body>
 </html>
