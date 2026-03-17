@@ -1,0 +1,15 @@
+# ============================================
+# netlify.toml — Configuration Netlify
+# À placer à la racine du projet
+# ============================================
+
+[build]
+  # Dossier contenant les fichiers à publier
+  # Laisser vide si index.html est à la racine
+  publish = "."
+
+# Page d'accueil par défaut = version française
+[[redirects]]
+  from = "/"
+  to   = "/index.html"
+  status = 200
